@@ -22,7 +22,7 @@ body {
     font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #333333;
     background-color: #F8F0E3;
-    background-size: cover;
+    height: 100%;
 }
 
 h1 {
