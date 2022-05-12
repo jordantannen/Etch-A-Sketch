@@ -1,6 +1,23 @@
-createGrid(32);
+let slider = document.getElementById("myRange");
+let sizeDisplay = document.getElementById("size");
+sizeDisplay.innerHTML = "Grid Size: " + slider.value + "x" + slider.value;
+
+createGrid(slider.value);
+
+slider.oninput = () => {
+    createGrid(slider.value);
+    sizeDisplay.innerHTML = "Grid Size: " + slider.value + "x" + slider.value;
+};
+
+
+let clearButton = document.getElementById("clear");
+clearButton.addEventListener("click", () => {
+    removeGrid()
+    createGrid(16);
+});
 
 function createGrid(size){
+    removeGrid();
     // Creates new col
     for (let i = 0; i < size; i++) {
         let col = document.createElement("div");
@@ -33,8 +50,4 @@ function removeGrid(){
 
 
 
-let clearButton = document.getElementById("clear");
-clearButton.addEventListener("click", () => {
-    removeGrid()
-    createGrid(16);
-});
+
