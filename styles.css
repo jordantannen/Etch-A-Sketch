@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unit {
+    height: 20px;
+    width: 20px;
+    border-style: solid;
+    border-color: black;
+}
+
+.color {
+    background-color: blue;
+}
