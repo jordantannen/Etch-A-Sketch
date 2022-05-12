@@ -1,3 +1,5 @@
+createGrid(32);
+
 function createGrid(size){
     // Creates new col
     for (let i = 0; i < size; i++) {
@@ -9,6 +11,8 @@ function createGrid(size){
         for (let j = 0; j < size; j++) {
             let x = document.createElement("div");
             x.classList.add("unit");
+            x.style.height = 800 / size + "px";
+            x.style.width = 800 / size + "px";
 
             x.addEventListener("mouseenter", () => x.classList.add("color"));
 
@@ -27,7 +31,10 @@ function removeGrid(){
     }
 }
 
-createGrid(16);
+
 
 let clearButton = document.getElementById("clear");
-clearButton.addEventListener("click", () => removeGrid());
+clearButton.addEventListener("click", () => {
+    removeGrid()
+    createGrid(16);
+});
