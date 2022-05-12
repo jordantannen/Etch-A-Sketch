@@ -30,7 +30,11 @@ h1 {
     margin-top: 0px;;
 }
 
-/* Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+h3 {
+    margin-top: 0;
+}
+
+/* Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp with modifications*/
 .slider {
     -webkit-appearance: none;
     width: 700px;
@@ -43,9 +47,9 @@ h1 {
     transition: opacity .2s;
     margin-left: 10px;
     margin-right: 10px;
-  }
-  
-  .slider::-webkit-slider-thumb {
+}
+
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 25px;
@@ -53,17 +57,28 @@ h1 {
     border-radius: 50%; 
     background: #333333;
     cursor: pointer;
-  }
+}
   
-  .slider::-moz-range-thumb {
+.slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background: #333333;
     cursor: pointer;
-  }
+}
 
-/* Source: https://getcssscan.com/css-buttons-examples */
+#color-val {
+    margin-left: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    min-height: 3rem;
+    
+}
+
+/* Source: https://getcssscan.com/css-buttons-examples with slight modifications*/
 button {
   align-items: center;
   background-color: #FFFFFF;
@@ -93,17 +108,18 @@ button {
 }
 
 button:hover,
-button:focus {
+button:focus,
+#color-val:hover {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   color: rgba(0, 0, 0, 0.65);
 }
 
-button:hover {
+button:hover, #color-val:hover {
   transform: translateY(-1px);
 }
 
-button:active {
+button:active, #color-val:active {
   background-color: #F0F0F1;
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;

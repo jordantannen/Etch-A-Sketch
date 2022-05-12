@@ -1,7 +1,8 @@
 let slider = document.getElementById("myRange");
 let sizeDisplay = document.getElementById("size");
-sizeDisplay.innerHTML = "Grid Size: " + slider.value + "x" + slider.value;
+let colorChoice = document.getElementById("color-val");
 
+sizeDisplay.innerHTML = "Grid Size: " + slider.value + "x" + slider.value;
 createGrid(slider.value);
 
 slider.oninput = () => {
@@ -9,11 +10,10 @@ slider.oninput = () => {
     sizeDisplay.innerHTML = "Grid Size: " + slider.value + "x" + slider.value;
 };
 
-
 let clearButton = document.getElementById("clear");
 clearButton.addEventListener("click", () => {
     removeGrid()
-    createGrid(16);
+    createGrid(slider.value);
 });
 
 function createGrid(size){
@@ -31,8 +31,9 @@ function createGrid(size){
             x.style.height = 800 / size + "px";
             x.style.width = 800 / size + "px";
 
-            x.addEventListener("mouseenter", () => x.classList.add("color"));
-
+            // x.addEventListener("mouseenter", () => x.classList.add("color"));
+            x.addEventListener("mouseenter", () => x.style.backgroundColor = colorChoice.value);
+            
             col.appendChild(x);
         }
     }
@@ -47,7 +48,3 @@ function removeGrid(){
         cols[i].remove();
     }
 }
-
-
-
-
