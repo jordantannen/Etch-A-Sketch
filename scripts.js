@@ -28,8 +28,8 @@ function createGrid(size){
         for (let j = 0; j < size; j++) {
             let x = document.createElement("div");
             x.classList.add("unit");
-            x.style.height = 800 / size + "px";
-            x.style.width = 800 / size + "px";
+            x.style.height = 600 / size + "px";
+            x.style.width = 600 / size + "px";
 
             // x.addEventListener("mouseenter", () => x.classList.add("color"));
             x.addEventListener("mouseenter", () => x.style.backgroundColor = colorChoice.value);
