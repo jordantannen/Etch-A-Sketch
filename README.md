@@ -1,8 +1,2 @@
 # Etch-A-Sketch #
-The classic drawing toy, digitized.
-
-## Technologies Used ##
-* HTML
-* CSS
-* JS
-
+The classic drawing toy, digitized. Built in vanilla HTML, CSS, and JS.
